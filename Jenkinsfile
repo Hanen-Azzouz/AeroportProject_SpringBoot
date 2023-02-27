@@ -5,10 +5,10 @@ pipeline {
         stage('Build') {
             steps {
                 git branch: 'main', url: 'https://github.com/Hanen-Azzouz/AeroportProject_SpringBoot.git',
-                credentialsId:'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';
+                credentialsId: 'Jenkins-Example-token-Github'
                    }
                         }
-        stage('clean') {
+        stage('Mvn-Version') {
             steps {
                 sh """mvn -version"""
                   }
