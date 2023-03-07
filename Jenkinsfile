@@ -18,16 +18,18 @@ pipeline {
             steps {
                  sh """mvn clean"""
                     }
+                            }
         stage('Mvn-COMPILE') {
             steps {
                   sh """mvn compiler:compile"""
                    }
+                              }
         stage('Mvn-SONARQUBE') {
             steps {
             withSonarQubeEnv(installationName: 'sq1')
                 {sh """mvn sonar:sonar"""}
                    }
-  }
+                              }
 
     }
    }
