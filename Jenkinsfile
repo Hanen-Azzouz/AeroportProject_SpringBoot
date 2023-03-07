@@ -8,10 +8,26 @@ pipeline {
                 credentialsId: 'Jenkins-Example-token-Github'
                    }
                         }
-        stage('Mvn-Version') {
+        stage('Mvn-VERSION') {
             steps {
                 sh """mvn -version"""
                   }
                         }
+
+        stage('Mvn-ClEAN') {
+            steps {
+                 sh """mvn clean"""
+                    }
+        stage('Mvn-COMPILE') {
+            steps {
+                  sh """mvn compiler:compile"""
+                   }
+        stage('Mvn-SONARQUBE') {
+            steps {
+            withSonarQubeEnv(installationName: 'sq1')
+                {sh """mvn sonar:sonar"""}
+                   }
+
+
     }
    }

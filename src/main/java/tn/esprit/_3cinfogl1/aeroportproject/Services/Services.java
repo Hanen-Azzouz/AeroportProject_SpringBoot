@@ -33,7 +33,7 @@ public class Services implements IServices{
     public String ajouterVolEtAeroport(Vol vol) {
         Aeroport aeroportdepart=vol.getDepartureairport();
         Aeroport aeroportarrivee=vol.getArrivalairport();
-        if(aeroportdepart.getCodeAITA()==aeroportarrivee.getCodeAITA()){
+        if(aeroportdepart.getCodeAITA().equals(aeroportarrivee.getCodeAITA())){
             return "<< Vérifier les aéroports saisis ! >>";
         }
         else{
