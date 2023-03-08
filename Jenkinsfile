@@ -21,7 +21,7 @@ pipeline {
                             }
         stage('Mvn-COMPILE') {
             steps {
-                  sh """mvn compiler:compile"""
+                  sh """mvn compile"""
                    }
                               }
         stage('Mvn-SONARQUBE') {
