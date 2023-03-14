@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                git branch: 'main', url: 'https://github.com/Hanen-Azzouz/AeroportProject_SpringBoot.git',
+                git branch: 'hanen', url: 'https://github.com/Hanen-Azzouz/AeroportProject_SpringBoot.git',
                 credentialsId: 'Jenkins-Example-token-Github'
                    }
                         }
